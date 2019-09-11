@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.12.1 FATAL_ERROR)
+project(yagol)
+add_subdirectory(submodules/mdspan)
+add_subdirectory(submodules/range-v3)
+add_executable(hello src/hello.cpp)
+target_link_libraries(hello std::mdspan)
+target_link_libraries(hello range-v3)
